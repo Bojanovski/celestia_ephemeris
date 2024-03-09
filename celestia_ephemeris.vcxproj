@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e33c0f40-fab3-493e-86b7-7036724162f8}</ProjectGuid>
+    <RootNamespace>celestiaephemeris</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;C:\Users\bojan\Desktop\eigen;C:\Users\bojan\Desktop\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;C:\Users\bojan\Desktop\eigen;C:\Users\bojan\Desktop\fmt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\celastro\astro.cpp" />
+    <ClCompile Include="src\celastro\date.cpp" />
+    <ClCompile Include="src\celastro\units.cpp" />
+    <ClCompile Include="src\celengine\asterism.cpp" />
+    <ClCompile Include="src\celengine\body.cpp" />
+    <ClCompile Include="src\celengine\boundaries.cpp" />
+    <ClCompile Include="src\celengine\category.cpp" />
+    <ClCompile Include="src\celengine\constellation.cpp" />
+    <ClCompile Include="src\celengine\deepskyobj.cpp" />
+    <ClCompile Include="src\celengine\dsodb.cpp" />
+    <ClCompile Include="src\celengine\dsoname.cpp" />
+    <ClCompile Include="src\celengine\dsooctree.cpp" />
+    <ClCompile Include="src\celengine\frame.cpp" />
+    <ClCompile Include="src\celengine\frametree.cpp" />
+    <ClCompile Include="src\celengine\galaxy.cpp" />
+    <ClCompile Include="src\celengine\galaxyform.cpp" />
+    <ClCompile Include="src\celengine\globular.cpp" />
+    <ClCompile Include="src\celengine\hash.cpp" />
+    <ClCompile Include="src\celengine\location.cpp" />
+    <ClCompile Include="src\celengine\marker.cpp" />
+    <ClCompile Include="src\celengine\name.cpp" />
+    <ClCompile Include="src\celengine\nebula.cpp" />
+    <ClCompile Include="src\celengine\observer.cpp" />
+    <ClCompile Include="src\celengine\opencluster.cpp" />
+    <ClCompile Include="src\celengine\parseobject.cpp" />
+    <ClCompile Include="src\celengine\parser.cpp" />
+    <ClCompile Include="src\celengine\projectionmode.cpp" />
+    <ClCompile Include="src\celengine\rotationmanager.cpp" />
+    <ClCompile Include="src\celengine\selection.cpp" />
+    <ClCompile Include="src\celengine\simulation.cpp" />
+    <ClCompile Include="src\celengine\solarsys.cpp" />
+    <ClCompile Include="src\celengine\star.cpp" />
+    <ClCompile Include="src\celengine\starcolors.cpp" />
+    <ClCompile Include="src\celengine\stardb.cpp" />
+    <ClCompile Include="src\celengine\starname.cpp" />
+    <ClCompile Include="src\celengine\staroctree.cpp" />
+    <ClCompile Include="src\celengine\stellarclass.cpp" />
+    <ClCompile Include="src\celengine\timeline.cpp" />
+    <ClCompile Include="src\celengine\timelinephase.cpp" />
+    <ClCompile Include="src\celengine\trajmanager.cpp" />
+    <ClCompile Include="src\celengine\universe.cpp" />
+    <ClCompile Include="src\celengine\value.cpp" />
+    <ClCompile Include="src\celephem\customorbit.cpp" />
+    <ClCompile Include="src\celephem\customrotation.cpp" />
+    <ClCompile Include="src\celephem\jpleph.cpp" />
+    <ClCompile Include="src\celephem\nutation.cpp" />
+    <ClCompile Include="src\celephem\orbit.cpp" />
+    <ClCompile Include="src\celephem\precession.cpp" />
+    <ClCompile Include="src\celephem\rotation.cpp" />
+    <ClCompile Include="src\celephem\sampfile.cpp" />
+    <ClCompile Include="src\celephem\samporbit.cpp" />
+    <ClCompile Include="src\celephem\samporient.cpp" />
+    <ClCompile Include="src\celephem\vsop87.cpp" />
+    <ClCompile Include="src\celestia\configfile.cpp" />
+    <ClCompile Include="src\celmath\frustum.cpp" />
+    <ClCompile Include="src\celmath\randutils.cpp" />
+    <ClCompile Include="src\celutil\color.cpp" />
+    <ClCompile Include="src\celutil\filetype.cpp" />
+    <ClCompile Include="src\celutil\fsutils.cpp" />
+    <ClCompile Include="src\celutil\greek.cpp" />
+    <ClCompile Include="src\celutil\logger.cpp" />
+    <ClCompile Include="src\celutil\r128util.cpp" />
+    <ClCompile Include="src\celutil\stringutils.cpp" />
+    <ClCompile Include="src\celutil\strnatcmp.cpp" />
+    <ClCompile Include="src\celutil\timer.cpp" />
+    <ClCompile Include="src\celutil\tokenizer.cpp" />
+    <ClCompile Include="src\celutil\utf8.cpp" />
+    <ClCompile Include="src\celutil\winutil.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\celastro\astro.h" />
+    <ClInclude Include="src\celastro\date.h" />
+    <ClInclude Include="src\celastro\units.h" />
+    <ClInclude Include="src\celcompat\bit.h" />
+    <ClInclude Include="src\celcompat\charconv.h" />
+    <ClInclude Include="src\celcompat\filesystem.h" />
+    <ClInclude Include="src\celcompat\numbers.h" />
+    <ClInclude Include="src\celcompat\numbers_impl.h" />
+    <ClInclude Include="src\celengine\asterism.h" />
+    <ClInclude Include="src\celengine\astroobj.h" />
+    <ClInclude Include="src\celengine\atmosphere.h" />
+    <ClInclude Include="src\celengine\body.h" />
+    <ClInclude Include="src\celengine\boundaries.h" />
+    <ClInclude Include="src\celengine\category.h" />
+    <ClInclude Include="src\celengine\constellation.h" />
+    <ClInclude Include="src\celengine\deepskyobj.h" />
+    <ClInclude Include="src\celengine\dsodb.h" />
+    <ClInclude Include="src\celengine\dsoname.h" />
+    <ClInclude Include="src\celengine\dsooctree.h" />
+    <ClInclude Include="src\celengine\frame.h" />
+    <ClInclude Include="src\celengine\frametree.h" />
+    <ClInclude Include="src\celengine\galaxy.h" />
+    <ClInclude Include="src\celengine\galaxyform.h" />
+    <ClInclude Include="src\celengine\geometry.h" />
+    <ClInclude Include="src\celengine\globular.h" />
+    <ClInclude Include="src\celengine\hash.h" />
+    <ClInclude Include="src\celengine\lightenv.h" />
+    <ClInclude Include="src\celengine\location.h" />
+    <ClInclude Include="src\celengine\marker.h" />
+    <ClInclude Include="src\celengine\multitexture.h" />
+    <ClInclude Include="src\celengine\name.h" />
+    <ClInclude Include="src\celengine\nebula.h" />
+    <ClInclude Include="src\celengine\observer.h" />
+    <ClInclude Include="src\celengine\octree.h" />
+    <ClInclude Include="src\celengine\opencluster.h" />
+    <ClInclude Include="src\celengine\parseobject.h" />
+    <ClInclude Include="src\celengine\parser.h" />
+    <ClInclude Include="src\celengine\projectionmode.h" />
+    <ClInclude Include="src\celengine\referencemark.h" />
+    <ClInclude Include="src\celengine\render.h" />
+    <ClInclude Include="src\celengine\renderlistentry.h" />
+    <ClInclude Include="src\celengine\rotationmanager.h" />
+    <ClInclude Include="src\celengine\selection.h" />
+    <ClInclude Include="src\celengine\shared.h" />
+    <ClInclude Include="src\celengine\simulation.h" />
+    <ClInclude Include="src\celengine\solarsys.h" />
+    <ClInclude Include="src\celengine\star.h" />
+    <ClInclude Include="src\celengine\starcolors.h" />
+    <ClInclude Include="src\celengine\stardb.h" />
+    <ClInclude Include="src\celengine\starname.h" />
+    <ClInclude Include="src\celengine\staroctree.h" />
+    <ClInclude Include="src\celengine\stellarclass.h" />
+    <ClInclude Include="src\celengine\surface.h" />
+    <ClInclude Include="src\celengine\texture.h" />
+    <ClInclude Include="src\celengine\timeline.h" />
+    <ClInclude Include="src\celengine\timelinephase.h" />
+    <ClInclude Include="src\celengine\trajmanager.h" />
+    <ClInclude Include="src\celengine\univcoord.h" />
+    <ClInclude Include="src\celengine\universe.h" />
+    <ClInclude Include="src\celengine\value.h" />
+    <ClInclude Include="src\celephem\customorbit.h" />
+    <ClInclude Include="src\celephem\customrotation.h" />
+    <ClInclude Include="src\celephem\jpleph.h" />
+    <ClInclude Include="src\celephem\nutation.h" />
+    <ClInclude Include="src\celephem\orbit.h" />
+    <ClInclude Include="src\celephem\precession.h" />
+    <ClInclude Include="src\celephem\rotation.h" />
+    <ClInclude Include="src\celephem\sampfile.h" />
+    <ClInclude Include="src\celephem\samporbit.h" />
+    <ClInclude Include="src\celephem\samporient.h" />
+    <ClInclude Include="src\celephem\vsop87.h" />
+    <ClInclude Include="src\celephem\xyzvbinary.h" />
+    <ClInclude Include="src\celestia\catalogloader.h" />
+    <ClInclude Include="src\celestia\configfile.h" />
+    <ClInclude Include="src\celestia\progressnotifier.h" />
+    <ClInclude Include="src\celmath\distance.h" />
+    <ClInclude Include="src\celmath\ellipsoid.h" />
+    <ClInclude Include="src\celmath\frustum.h" />
+    <ClInclude Include="src\celmath\geomutil.h" />
+    <ClInclude Include="src\celmath\intersect.h" />
+    <ClInclude Include="src\celmath\mathlib.h" />
+    <ClInclude Include="src\celmath\randutils.h" />
+    <ClInclude Include="src\celmath\ray.h" />
+    <ClInclude Include="src\celmath\solve.h" />
+    <ClInclude Include="src\celmath\sphere.h" />
+    <ClInclude Include="src\celmath\vecgl.h" />
+    <ClInclude Include="src\celutil\arrayvector.h" />
+    <ClInclude Include="src\celutil\array_view.h" />
+    <ClInclude Include="src\celutil\binaryread.h" />
+    <ClInclude Include="src\celutil\binarywrite.h" />
+    <ClInclude Include="src\celutil\blockarray.h" />
+    <ClInclude Include="src\celutil\bytes.h" />
+    <ClInclude Include="src\celutil\color.h" />
+    <ClInclude Include="src\celutil\filetype.h" />
+    <ClInclude Include="src\celutil\fsutils.h" />
+    <ClInclude Include="src\celutil\gettext.h" />
+    <ClInclude Include="src\celutil\greek.h" />
+    <ClInclude Include="src\celutil\infourl.h" />
+    <ClInclude Include="src\celutil\intrusiveptr.h" />
+    <ClInclude Include="src\celutil\logger.h" />
+    <ClInclude Include="src\celutil\r128.h" />
+    <ClInclude Include="src\celutil\r128util.h" />
+    <ClInclude Include="src\celutil\ranges.h" />
+    <ClInclude Include="src\celutil\reshandle.h" />
+    <ClInclude Include="src\celutil\stringutils.h" />
+    <ClInclude Include="src\celutil\strnatcmp.h" />
+    <ClInclude Include="src\celutil\timer.h" />
+    <ClInclude Include="src\celutil\tokenizer.h" />
+    <ClInclude Include="src\celutil\utf8.h" />
+    <ClInclude Include="src\celutil\winutil.h" />
+    <ClInclude Include="src\config.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
